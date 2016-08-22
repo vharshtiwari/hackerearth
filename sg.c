@@ -27,7 +27,8 @@ int main()
 	 		d++;
 	 	}
 	   else
-	   {for(int j=2;j<ar[p];j++)	// prime no. checking
+	   {
+	   	for(int j=2;j<ar[p];j++)	// prime no. checking
 	 	{ 
 	 	  
 	 	   if(ar[p]%j==0)
@@ -37,7 +38,7 @@ int main()
 	 	  else if(j==(ar[p]-1) && (ar[p]%j)!=0)
 	 	  {
 	 	  	ar1[d]=ar[p];
-	 	  	d++; 	  						   // if prime than filling in differnt array
+	 	  	d++; 	  		   // if prime than filling in differnt array
 	 	  }
 	 	}
 	 }
@@ -52,20 +53,17 @@ int main()
 	 for (int c =1 ; c<=d-1; c++) 
     {
     	int g=c;
-    	while ( g > 0 && ar1[g]<ar1[g-1]) {
+    	while ( g > 0 && ar1[g]<ar1[g-1])
+    	{
       		l = ar1[g];
       		ar1[g]=ar1[g-1];
       		ar1[g-1] = l;
     	  	g--;
-    	}
-  	} 
-  printf("%d",ar1[d-1]*ar1[d-1]);
-	 
-	 
-
-}
-
-}
+    	  	}
+    } 
+   printf("%d",ar1[d-1]*ar1[d-1]);
+    }
+  }
 }
 
 
